@@ -7,6 +7,8 @@ public class ReferencesFactory {
     private Map<String, Integer> references;
 
     private int reference;
+    
+    private static final ReferencesFactory INSTANCE = new ReferencesFactory();
 
     public ReferencesFactory() {
         this.references = new HashMap<String, Integer>();
@@ -25,6 +27,10 @@ public class ReferencesFactory {
 
     public void removeReference(String key) {
         this.references.remove(key);
+    }
+    
+    public static ReferencesFactory getFactory() {
+        return INSTANCE;
     }
 
 }
