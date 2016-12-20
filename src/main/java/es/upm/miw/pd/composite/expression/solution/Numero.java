@@ -2,17 +2,20 @@ package es.upm.miw.pd.composite.expression.solution;
 
 public class Numero extends Expression {
 
-    public int numero;
+	private int value;
 
-    public Numero(int numero) {
-        super();
-        this.numero = numero;
-    }
+	public Numero(int value) {
+		this.value = value;
+	}
 
-    @Override
-    public int operar() {
-        return this.numero;
+	@Override
+	public int operar() {
+		return value;
+	}
 
-    }
+	@Override
+	public String toString() {
+		return String.valueOf(value);
+	}
 
 }
